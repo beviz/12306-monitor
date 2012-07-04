@@ -47,6 +47,9 @@ if (want.length == 0) {
       for (var i = 0; i < want.length; i++) {
         var one = want[i];
         var train_line = iframe_window.$('#gridbox').find('tr:contains('+ one[0] + ')');
+        if (train_line.length == 0) {
+          continue;
+        }
         $(one[1].split('')).each(function(index, tindex) {
           tindex = $.trim(tindex);
           if (!/^[0-9]$/.test(tindex)) {
