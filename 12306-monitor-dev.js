@@ -62,7 +62,7 @@ if (want.length == 0) {
           if (console && console.log) {
             console.log(one[0], type.name, text, new Date());
           }
-          if (text != '无' && text != '--') {
+          if (['无', '--', '*', '0'].indexOf(text) == -1) {
             train_grid.css('background-color', "red");
             found = true;
           }
